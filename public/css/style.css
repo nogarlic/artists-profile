@@ -1,0 +1,124 @@
+body{
+    /*background-color: rgba(163, 81, 81, 0.329);*/
+    background: rgba(255, 255, 255, 0.438);
+
+    }
+
+    .navbar {
+        background-color: transparent;
+        z-index: 100;
+        top: 0;
+    }
+
+    .navbar:hover {
+        background-color: rgba(255, 255, 255, 0.862);
+        color: black;
+    }
+
+    .navbar-e-gate {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .navbar:hover .nav-link {
+        color: black;
+    }
+
+    .nav-item {
+        margin-left: 50px;
+    }
+
+    .nav-item a {
+        position: relative;
+    }
+
+    .nav-item a::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        border-radius: 4px;
+        background-color: #18272F;
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+    }
+
+    .nav-item a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    }
+
+    .nav-footer {
+        background-color: transparent;
+        position: fixed;
+        bottom: 0;
+        right: 5%;
+    }
+
+    .nav-item-footer {
+        list-style-type: none;
+        bottom: 0;
+    }
+    
+    .img-wo {
+        position: absolute;
+    }
+
+    .bi {
+        color: black;
+    }
+
+    .nav-link {
+        color: rgba(81, 98, 255, 0);
+        font-size: 20px;
+        font-family: 'Alumni Sans Pinstripe', sans-serif;
+        font-size: 30px;
+    }
+
+    .nav-link-active {
+        color: rgb(0, 0, 0);
+    }
+
+    .nav-link:hover {
+        color: black;
+        font-weight: 400;
+        font-size: 30px;
+    }
+
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+      
+
+    
+    .profile-spaces {
+        background-color: transparent;
+        position: relative;
+        padding-top: 45%;
+    }
+
+    .container-sm {
+        background-color: white;
+        position: relative;
+    }
+
+    .wo-profile {
+        font-family: 'Ubuntu', sans-serif;
+        padding-left: 40px;
+        padding-top: 50px;
+    }
+
+    .wo-profile p {
+        padding-top: 32px;
+    }
+
+    .member button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
