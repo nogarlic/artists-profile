@@ -12,13 +12,13 @@
         <?php $slide++ ?>
       @endforeach
     </div>
-    <div class="carousel-inner">
+    <div class="carousel-inner cover-song">
       <div class="carousel-item active" id="1">
         <img src="img/disco-1-to_be_one.jpg" class="d-block album" alt="...">
       </div>
 
       @foreach ($albums->skip(1) as $album)
-      <div class="carousel-item" id="{{ $album['id'] }}">
+      <div class="carousel-item cover-song" id="{{ $album['id'] }}">
         <img src="img/{{ $album['album_cover'] }}" class="d-block album" alt="...">
       </div>
       @endforeach
@@ -76,7 +76,7 @@
               <thead>
                 <tr>
                   <th scope="col">#</th>
-                  <th scope="col">Title</th>
+                  {{-- <th scope="col">Title</th> --}}
                   <th scope="col">Play</th>
                 </tr>
               </thead>
@@ -90,7 +90,7 @@
                   @foreach ($album_songs as $song)
                   <tr>
                     <th scope="row">{{ $loop->iteration }}</th>
-                    <td>{{ $song['name'] }}</td>
+                    {{-- <td>{{ $song['name'] }}</td> --}}
                     <td><iframe style="border-radius:12px" src="{{ $song['embed_spotify'] }}" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                   </tr>
                 @endforeach

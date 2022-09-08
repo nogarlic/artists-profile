@@ -36,7 +36,7 @@
                 <hr>
                 <ul>
                   @foreach ($filmographies as $filmography)
-                      <li>- {{ $filmography['name']." (".$filmography['year']." ,".$filmography['channel'].")" }}</li>
+                      <li>- {{ $filmography['name']." (".$filmography['year'].", ".$filmography['channel'].")" }}</li>
                   @endforeach
                 </ul>
             </div>

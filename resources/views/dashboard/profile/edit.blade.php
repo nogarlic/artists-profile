@@ -19,7 +19,7 @@
                     @if ($user->header_photo )
                         <img src="{{ asset('storage/' . $user->header_photo ) }}" alt="" class="img-preview img-fluid mb-3 col-sm-5 d-block">
                     @else
-                        <img src="" alt="" class="img-preview img-fluid mb-3 col-sm-5">
+                        <img src="http://project2.test:85/storage/layout/header-blank.jpg" alt="" class="img-preview img-fluid mb-3 col-sm-5">
                     @endif
                     <input class="form-control" type="file" id="image" name="header_photo" onchange="previewImage()">
                     @error('header_photo')
@@ -36,7 +36,7 @@
                     @if ($user->photo_profile )
                         <img src="{{ asset('storage/' . $user->photo_profile ) }}" alt="" class="img-preview-photo img-fluid mb-3 col-sm-5 d-block">
                     @else
-                        <img src="" alt="" class="img-preview img-fluid mb-3 col-sm-5">
+                        <img src="{{ asset('storage/post-images/profil-null.png') }}" alt="" class="img-preview img-fluid mb-3 col-sm-5">
                     @endif
                     <input class="form-control" type="file" id="image-photo" name="photo_profile" onchange="previewImageProfile()">
                     @error('photo_profile')

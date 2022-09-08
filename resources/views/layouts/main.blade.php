@@ -255,7 +255,7 @@
             }
 
             .ot11 {
-                background-color: black;
+                background-color: rgba(255, 255, 255, 0.178);
                 padding-top: 10px;
                 border-radius: 40px;
                 margin-left: 25px;
@@ -276,6 +276,10 @@
             .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
                 color: rgb(0, 0, 0);
                 background-color: #ffffff;
+            }
+
+            .cover-song img {
+                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
             }
 
             .photo {
@@ -301,6 +305,13 @@
 
             .pagination a:hover {
                 color: black;
+            }
+
+            .page-item.active .page-link {
+                z-index: 1;
+                color: rgb(0, 0, 0);
+                background-color: #ffffff;
+                border-color: transparent;
             }
 
             .pagination .active span {

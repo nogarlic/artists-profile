@@ -40,4 +40,5 @@
     <div class="d-flex justify-content-center photo-pagination">
         {{ $photos->links() }}
     </div>
+
 @endsection
