@@ -273,6 +273,11 @@
                 color: black;
             }
 
+            .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+                color: rgb(0, 0, 0);
+                background-color: #ffffff;
+            }
+
             .photo {
                 width: 300px;
                 height: 300px;
@@ -395,6 +400,7 @@
                 margin-top: 60px;
                 margin-bottom: 40px;
             }
+
 
     </style>
 

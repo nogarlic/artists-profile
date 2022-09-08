@@ -10,7 +10,7 @@
         <div class="ot11">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/gallery">Wanna One</a>
+                    <a class="nav-link {{ $title == 'Multimedia ' ? 'active' : '' }}" aria-current="page" href="/gallery">WANNA ONE</a>
                 </li>
                 @foreach ($members as $member)
                 <li class="nav-item {{ str_contains($title, $member['name']) ? 'active' : '' }}">
