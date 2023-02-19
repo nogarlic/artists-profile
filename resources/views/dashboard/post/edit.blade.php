@@ -8,10 +8,10 @@
             <div class="post">
                 <div class="post-single row">
                     <div class="col-2">
-                        @if (isset($post->user->photo_profile))
-                            <a href="/{{ $post->user->username }}"><img src="img/{{ $post->user->photo_profile  }}" alt="" width="60px" height="60px" class="image-fluid rounded-circle photo-home"></a>        
+                        @if ($post->user->photo_profile )
+                            <img src="{{ asset('storage/' . $post->user->photo_profile ) }}" alt="" width="80px" height="80px" class="img-preview image-fluid rounded-circle photo-home">
                         @else
-                            <a href="/{{ $post->user->username }}"><img src="img/profil-null.png" alt="" width="60px" height="60px" class="image-fluid rounded-circle photo-home"></a>      
+                            <img src="{{ asset('storage/post-images/profil-null.png') }}" alt="" width="80px" height="80px" class="img-preview image-fluid rounded-circle photo-home">
                         @endif
                     </div>
                     <div class="col-10">

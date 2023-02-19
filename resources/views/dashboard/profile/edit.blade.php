@@ -19,7 +19,7 @@
                     @if ($user->header_photo )
                         <img src="{{ asset('storage/' . $user->header_photo ) }}" alt="" class="img-preview img-fluid mb-3 col-sm-5 d-block">
                     @else
-                        <img src="http://project2.test:85/storage/layout/header-blank.jpg" alt="" class="img-preview img-fluid mb-3 col-sm-5">
+                        <img src="http://project2.test/storage/layout/header-blank.jpg" alt="" class="img-preview img-fluid mb-3 col-sm-5">
                     @endif
                     <input class="form-control" type="file" id="image" name="header_photo" onchange="previewImage()">
                     @error('header_photo')

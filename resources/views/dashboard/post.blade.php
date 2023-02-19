@@ -52,17 +52,16 @@
                                 <button type="button" class="" data-bs-toggle="dropdown" aria-expanded="false">
                                     ...
                                 </button>
-                                  <ul class="dropdown-menu">
-                                      <li><a class="dropdown-item" href="/posts/{{ $post->id }}/edit">Edit</a></li>
-                                      <form action="/posts/{{ $post->id }}" method="post" class="d-inline">
-                                          @method('delete')
-                                          @csrf
-                                        <button class="border-0 dropdown-item" onclick="return confirm('Are you sure?')">Delete</button>
-                                      </form>
-                                  </ul>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="/posts/{{ $post->id }}/edit">Edit</a></li>
+                                        <form action="/posts/{{ $post->id }}" method="post" class="d-inline">
+                                            @method('delete')
+                                            @csrf
+                                            <button class="border-0 dropdown-item" onclick="return confirm('Are you sure?')">Delete</button>
+                                        </form>
+                                    </ul>
                                 @endif
-                              </div>
-                              
+                                </div>
                         </div>
                     </div>
 

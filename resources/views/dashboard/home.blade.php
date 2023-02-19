@@ -35,8 +35,9 @@
                 </div>
                 <div class="d-flex justify-content-center">
                     <div class="mb-3">
-                        <input type="file" id="image" name="image" class="hidden custom-file-input"/>
-                        <label for="image"><i class="bi bi-card-image img-in"></i></label>
+                        <label for="image" class="form-label @error('image') is-invalid @enderror"><i class="bi bi-card-image img-in"></i></label>
+                        <img src="http://project2.test/storage/layout/header-blank2.jpg" alt="" class="img-preview img-fluid mb-3 col-sm-5">
+                        <input class="form-control hidden custom-file-input" type="file" id="image" name="image" onchange="previewImage()">
                         @error('image')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -150,6 +151,20 @@
     function likeButton() {
         postId = event.target.parentNode.parentNode.dataset['postid'];
         $('#vote'+postId).load(" #vote"+postId);
+    }
+
+    function previewImage() {
+        const image = document.querySelector('#image');
+        const imgPreview = document.querySelector('.img-preview');
+
+        imgPreview.style.display = 'block';
+
+        const ofReader = new FileReader();
+        ofReader.readAsDataURL(image.files[0]);
+
+        ofReader.onload = function(oFREvent) {
+            imgPreview.src = oFREvent.target.result;
+        }
     }
 
 </script>

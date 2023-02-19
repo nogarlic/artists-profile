@@ -40,6 +40,7 @@
 
             hr {
                 margin-bottom: 15px;
+                border-top: 3px solid rgb(0, 0, 0);
             }
 
             .wo-profile {
@@ -150,8 +151,8 @@
                 color: white;
                 width: 70%;
                 height: 50%;
-                margin-bottom: 10%;
-                margin-left: 15%;
+                margin-bottom: 50%;
+                margin-left: 75px;
             }
 
             /* .detail-canvas .offcanvas {
@@ -412,6 +413,17 @@
                 margin-bottom: 40px;
             }
 
+            /* responsive */
+            .navbar-toggler-icon {
+                background-image: url(data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+            }
+
+            .navbar-light .navbar-toggler {
+                color: rgba(54, 51, 51, 0.5);
+                border-color: transparent;
+                margin-left: 10px;
+            }
+
 
     </style>
 
@@ -432,6 +444,14 @@
     <script src="js/script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <script>
+        var width = $(window).width();
+            if (width <= 500) {
+                console.log(width); 
+                $('nav').addClass('navbar-light');
+            }
+    </script>
 
 </body>
 </html>

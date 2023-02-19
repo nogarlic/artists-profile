@@ -103,7 +103,7 @@ class UserController extends Controller
         User::where('id', $user->id)
             ->update($validateData);
 
-        return redirect('/forum')->with('success', 'Profile has been updated!');
+        return redirect('/'.$user->username)->with('success', 'Profile has been updated!');
     }
 
     /**

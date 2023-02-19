@@ -5,7 +5,9 @@
 <div class="user-layout">
     <div class="header-layout">
     @if (isset($posts[0]->user->header_photo))
-        <img src="{{ asset('storage/' . $posts[0]->user->header_photo) }}" alt="" height="200px" width="650px" class="image-fluid header-photo">
+    <div id="header-photo-section">
+        <img src="{{ asset('storage/' . $posts[0]->user->header_photo) }}" alt="" class="header-photo" id="header-photo">
+    </div>
     @else
         <img src="{{ asset('storage/layout/header-blank.jpg') }}" alt="" height="200px" width="650px" class="image-fluid header-photo">
     @endif
@@ -34,4 +36,10 @@
 
 </div>
 @endif
+
+<script>
+    document.getElementById("header-photo-section").style.overflow = "hidden";
+    document.getElementById("header-photo-section").style.height = "200px";
+    document.getElementById("header-photo-section").style.width = "650px";
+</script>
 
